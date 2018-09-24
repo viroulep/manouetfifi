@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Manouetfifi</title>
+    <title><%= page_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_pack_tag 'stylesheets', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= yield :additional_scripts %>
     <!-- TODO
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -20,9 +21,16 @@
   </head>
 
   <body>
-    <p><%= fa_icon("pencil") %> - <%= flag_icon("FR") %></p>
-    <div id="titi"></div>
-    <%= yield %>
-    <script>$("#titi").text("coucou");</script>
+    <%= render 'layouts/navigation' %>
+
+    <div id="main-container">
+      <%= render 'layouts/flash' %>
+
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render 'layouts/footer' %>
   </body>
 </html>
