@@ -1,0 +1,23 @@
+<%= simple_form_for guest do |form| %>
+  <% if guest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guest.errors.count, "error") %> prohibited this guest from being saved:</h2>
+
+      <ul>
+      <% guest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.input :name %>
+  <%= form.input :avatar %>
+  <%= form.input :description %>
+  <%= form.input :country_iso2, collection: Country.real, label_method: lambda { |c| c.name }, value_method: lambda { |c| c.iso2 } %>
+  <%= form.input :confirmed %>
+
+  <div class="actions">
+    <%= form.button :submit %>
+  </div>
+<% end %>

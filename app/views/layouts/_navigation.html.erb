@@ -6,7 +6,7 @@
         <div class="brand-header">
           <div class="brand-name">
             <%= link_to root_path do %>
-              <span class="blue d-none d-md-block">Mariage</span>
+              <span class="blue d-none d-md-block">truc</span>
               <%#<span class="blue d-md-none">AFS</span>%>
             <% end %>
           </div>
@@ -29,7 +29,7 @@
                 <i class="fa fa-home"></i> <span class="d-sm-none d-lg-inline">Accueil</span>
               <% end %>
             </li>
-            <% if current_user %>
+            <% if current_user&.admin? %>
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle nav-user" data-toggle="dropdown" data-hover="dropdown">
                   <div class="avatar-thumbnail "
@@ -42,15 +42,11 @@
                     <%= current_user.name %>
                   </h6>
                   <%= link_to "Votre profil", root_path, class: "dropdown-item" %>
-                  <% if current_user.admin? %>
-                    <div class="dropdown-divider"></div>
-                    <h6 role="presentation" class="dropdown-header">
-                      Administration
-                    </h6>
-                    <%# if current_user.admin? %>
-                      <%# link_to "Utilisateurs", users_path, class: "dropdown-item" %>
-                    <%# end %>
-                  <% end %>
+                  <div class="dropdown-divider"></div>
+                  <h6 role="presentation" class="dropdown-header">
+                    Administration
+                  </h6>
+                  <%= link_to "Invités", guests_path, class: "dropdown-item" %>
                   <div class="dropdown-divider"></div>
                   <%= link_to "Déconnexion", signout_path, class: "dropdown-item" %>
                 </div>
