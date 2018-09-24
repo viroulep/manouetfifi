@@ -5,3 +5,13 @@
 @import 'variables';
 @import 'layout';
 @import 'footer';
+
+.custom-checkbox {
+  padding-left: 15px;
+  .custom-control-label {
+    &::before {
+      border: 1px solid #aaa;
+    }
+    margin-left: 25px;
+  }
+}
