@@ -11,6 +11,10 @@ class SessionsController < ApplicationController
     redirect_to wca_login_url(scopes.join(" "))
   end
 
+  def home
+    render layout: "blank"
+  end
+
   # The WCA.org OAuth code redirects to here after user logs in
   # From here: https://github.com/larspetrus/Birdflu/blob/1a74b55c1005e3ad74c51881c06b88a9d3f3f8d7/app/controllers/oauth_controller.rb
   def create

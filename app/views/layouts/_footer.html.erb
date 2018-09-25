@@ -4,6 +4,12 @@
       <a href="https://github.com/viroulep/manouetfifi" target="_blank">
         <i class="fa fa-github"></i>
       </a>
+      |
+      <% if current_user %>
+        <%= link_to(fa_icon("sign-out"), signout_path) %>
+      <% else %>
+        <%= link_to(fa_icon("sign-in"), signin_path) %>
+      <% end %>
     </p>
   </div>
 </footer>
