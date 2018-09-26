@@ -1,0 +1,10 @@
+class CreateTables < ActiveRecord::Migration[5.2]
+  def change
+    create_table :tables do |t|
+      t.string :name
+
+      t.timestamps
+    end
+    add_belongs_to :guests, :table
+  end
+end

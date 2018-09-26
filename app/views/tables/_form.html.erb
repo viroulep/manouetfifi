@@ -1,0 +1,27 @@
+<%= simple_form_for(table) do |form| %>
+  <% if table.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(table.errors.count, "error") %> prohibited this table from being saved:</h2>
+
+      <ul>
+      <% table.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.input :name %>
+
+  <%#TODO: rework this like the organizers/delegates selectize in the WCA website%>
+  <div class="table-guests">
+    <%= form.simple_fields_for :guests do |guest| %>
+      <%= render 'guest_fields', f: guest %>
+    <% end %>
+  </div>
+
+  <%= link_to_add_association "add guest", form, :guests,
+      data: { association_insertion_node: ".table-guests", association_method: "append" } %>
+
+  <%= form.button :submit %>
+<% end %>

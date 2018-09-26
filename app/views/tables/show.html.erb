@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @table.name %>
+</p>
+
+<% if @table.guests.any? %>
+  <ul>
+  <% @table.guests.each do |g| %>
+    <li><%= g.name %><li>
+  <% end %>
+  </ul>
+<% else %>
+  <p>Pas d'invités à cette table</p>
+<% end %>
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>

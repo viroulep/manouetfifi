@@ -1,0 +1,4 @@
+<div class="nested-fields">
+  <%= f.input :id, collection: Guest.order(:name), prompt: "Choose a guest" %>
+  <%= link_to_remove_association "remove guest", f %>
+</div>
