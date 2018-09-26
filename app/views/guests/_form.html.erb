@@ -21,6 +21,7 @@
   <% end %>
   <%= form.file_field :avatar %>
   <%= form.input :description %>
+  <%= form.input :invited_by, collection: Guest::INVITERS  %>
   <%= form.input :country_iso2, collection: Country.real, label_method: lambda { |c| c.name }, value_method: lambda { |c| c.iso2 } %>
   <%= form.input :confirmed %>
 

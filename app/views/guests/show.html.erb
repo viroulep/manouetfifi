@@ -2,13 +2,14 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @guest.name %>
+  <%= @guest.name %> <%= flag_icon(@guest.country_iso2) %>
 </p>
 
-<p>
-  <strong>Avatar:</strong>
-  <%= @guest.avatar %>
-</p>
+<% if @guest.avatar.file.nil? %>
+  <strong>L'utilisateur n'a pas de photo.</strong>
+<% else %>
+  <img src="<%= "#{root_url}/#{@guest.avatar.url}" %>"/>
+<% end %>
 
 <p>
   <strong>Description:</strong>
@@ -16,8 +17,7 @@
 </p>
 
 <p>
-  <strong>Country iso2:</strong>
-  <%= @guest.country_iso2 %>
+  Invited by <%= @guest.invited_by %> and <%= @guest.confirmed ? "confirmed" : "not confirmed" %>.
 </p>
 
 <%= link_to 'Edit', edit_guest_path(@guest) %> |

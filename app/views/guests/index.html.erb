@@ -5,10 +5,12 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
-      <th>Avatar</th>
       <th>Description</th>
-      <th>Country iso2</th>
+      <th>Country</th>
+      <th>Confirmed</th>
+      <th>Invited by</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +18,14 @@
   <tbody>
     <% @guests.each do |guest| %>
       <tr>
+        <td>
+          <img src="<%= "#{root_url}/#{guest.avatar.mini_thumb.url}" %>" width="64px" />
+        </td>
         <td><%= guest.name %></td>
-        <td><%= guest.avatar %></td>
         <td><%= guest.description %></td>
-        <td><%= guest.country_iso2 %></td>
+        <td><%= flag_icon(guest.country_iso2) %></td>
+        <td><%= guest.confirmed %></td>
+        <td><%= guest.invited_by %></td>
         <td><%= link_to 'Show', guest %></td>
         <td><%= link_to 'Edit', edit_guest_path(guest) %></td>
         <td><%= link_to 'Destroy', guest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
