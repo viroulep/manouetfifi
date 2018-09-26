@@ -69,4 +69,8 @@ module ApplicationHelper
   def fa_icon(id)
     content_tag :i, "", class: "fa fa-#{id}"
   end
+
+  def public_image_tag(url, **tag_options)
+    tag("img", src: "#{root_url}/#{url}", **tag_options)
+  end
 end

@@ -8,7 +8,7 @@
 <% if @guest.avatar.file.nil? %>
   <strong>L'utilisateur n'a pas de photo.</strong>
 <% else %>
-  <img src="<%= "#{root_url}/#{@guest.avatar.url}" %>"/>
+  <%= public_image_tag(@guest.avatar.url) %>
 <% end %>
 
 <p>

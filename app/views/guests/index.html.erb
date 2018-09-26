@@ -19,7 +19,7 @@
     <% @guests.each do |guest| %>
       <tr>
         <td>
-          <img src="<%= "#{root_url}/#{guest.avatar.mini_thumb.url}" %>" width="64px" />
+          <%= public_image_tag(guest.avatar.mini_thumb.url, width: 64) %>
         </td>
         <td><%= guest.name %></td>
         <td><%= guest.description %></td>

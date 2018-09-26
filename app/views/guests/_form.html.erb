@@ -13,7 +13,7 @@
 
   <%= form.input :name %>
   <% unless guest.avatar.file.nil? %>
-    <img src="<%= "#{root_url}/#{guest.avatar.mini_thumb.url}" %>"/>
+    <%= public_image_tag(guest.avatar.mini_thumb.url) %>
     <%= form.input :remove_avatar, as: :boolean %>
     <br />
     You can upload a new image file below:
