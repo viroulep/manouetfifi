@@ -12,7 +12,14 @@
   <% end %>
 
   <%= form.input :name %>
-  <%= form.input :avatar %>
+  <% unless guest.avatar.file.nil? %>
+    <img src="<%= "#{root_url}/#{guest.avatar.mini_thumb.url}" %>"/>
+    <%= form.input :remove_avatar, as: :boolean %>
+    <br />
+    You can upload a new image file below:
+    <br />
+  <% end %>
+  <%= form.file_field :avatar %>
   <%= form.input :description %>
   <%= form.input :country_iso2, collection: Country.real, label_method: lambda { |c| c.name }, value_method: lambda { |c| c.iso2 } %>
   <%= form.input :confirmed %>

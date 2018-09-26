@@ -33,6 +33,8 @@ gem 'dotenv-rails'
 gem 'simple_form'
 gem 'cocoon'
 gem 'rest-client'
+gem 'carrierwave'
+gem 'mini_magick'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
