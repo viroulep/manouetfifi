@@ -1,4 +1,4 @@
-<%= simple_form_for(table) do |form| %>
+<%= simple_form_for(table, wrapper: :horizontal_form) do |form| %>
   <% if table.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(table.errors.count, "error") %> prohibited this table from being saved:</h2>
@@ -13,15 +13,20 @@
 
   <%= form.input :name %>
 
-  <%#TODO: rework this like the organizers/delegates selectize in the WCA website%>
-  <div class="table-guests">
-    <%= form.simple_fields_for :guests do |guest| %>
-      <%= render 'guest_fields', f: guest %>
-    <% end %>
-  </div>
-
-  <%= link_to_add_association "add guest", form, :guests,
-      data: { association_insertion_node: ".table-guests", association_method: "append" } %>
+  <%= form.input :guests_ids, input_html: { class: "enable-selectize" } %>
 
   <%= form.button :submit %>
 <% end %>
+<% content_for :additional_scripts do %>
+  <%= javascript_pack_tag "selectize", 'data-turbolinks-track': 'reload'  %>
+<% end %>
+<script>
+  let renderFunc = function(type, data) {
+    let $div = $('<div class="wedding-guest"> <div class="avatar-thumbnail"></div> <div class="info"><div class="name"></div><div class="invited_by"></div></div> </div>');
+    $div.find(".name").text(data.name);
+    $div.find(".avatar-thumbnail").css('background-image', 'url("<%= root_url %>/' + data.thumb + '")');
+    $div.find(".invited_by").text(data.invited_by);
+    return $div[0].outerHTML;
+  };
+  window.manouetfifi.enableSelectize(<%= guests_to_options %>, renderFunc);
+</script>

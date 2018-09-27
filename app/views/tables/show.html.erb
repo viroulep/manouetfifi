@@ -6,11 +6,11 @@
 </p>
 
 <% if @table.guests.any? %>
-  <ul>
-  <% @table.guests.each do |g| %>
-    <li><%= g.name %><li>
-  <% end %>
-  </ul>
+  <div class="list-group">
+    <% @table.guests.each do |g| %>
+      <%= render "shared/guest", guest: g, extra_classes: "list-group-item" %>
+    <% end %>
+  </div>
 <% else %>
   <p>Pas d'invités à cette table</p>
 <% end %>

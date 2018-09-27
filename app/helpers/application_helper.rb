@@ -70,7 +70,11 @@ module ApplicationHelper
     content_tag :i, "", class: "fa fa-#{id}"
   end
 
+  def public_image_url(url)
+    "#{root_url}/#{url}"
+  end
+
   def public_image_tag(url, **tag_options)
-    tag("img", src: "#{root_url}/#{url}", **tag_options)
+    tag("img", src: public_image_url(url), **tag_options)
   end
 end

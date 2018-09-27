@@ -1,0 +1,10 @@
+<% extra_classes ||= "" %>
+<div class="wedding-guest <%= extra_classes %>">
+  <div class="avatar-thumbnail"
+       style="background-image: url('<%= public_image_url(guest.avatar.mini_thumb.url) %>');"
+  ></div>
+  <div class="info">
+    <div class="name"><%= guest.name %></div>
+    <div class="invited_by"><%= guest.invited_by %></div>
+  </div>
+</div>
