@@ -9,7 +9,7 @@
 
 import 'bootstrap/dist/js/bootstrap';
 import Turbolinks from 'turbolinks';
-import 'cocoon';
+import {} from 'jquery-ujs';
 
 Turbolinks.start();
 

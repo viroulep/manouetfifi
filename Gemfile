@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'dotenv-rails'
 gem 'simple_form'
-gem 'cocoon'
+#gem 'cocoon'
 gem 'rest-client'
 gem 'carrierwave'
 gem 'mini_magick'
