@@ -1,0 +1,12 @@
+<h1>Plan de tables</h1>
+
+<canvas id="tables-map" width="800" height="600"></canvas>
+
+<% content_for :additional_scripts do %>
+  <%= javascript_pack_tag "tables_map", 'data-turbolinks-track': 'reload'  %>
+<% end %>
+<script>
+$(function() {
+  window.manouetfifi.enableMap("tables-map");
+});
+</script>

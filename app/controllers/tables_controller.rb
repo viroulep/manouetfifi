@@ -1,5 +1,11 @@
 class TablesController < ApplicationController
+  # TODO: protect the plan action
+  before_action :authenticate_user!, except: [:plan]
+  before_action :redirect_unless_admin!, except: [:plan]
   before_action :set_table, only: [:show, :edit, :update, :destroy]
+
+  def plan
+  end
 
   # GET /tables
   # GET /tables.json
