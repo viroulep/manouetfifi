@@ -1,11 +1,22 @@
-$bg-header: #ffdbf2;
+$bg-header: #942a57;
 //other ideas for bg header: #ff87d3
-$border-color: #ff87d3;
 $footer-height: 50px;
+$footer-bg-color: #aa5579;
+
+$default-color: white;
 
 // links color
-$regular-link-color: $border-color;
-$hover-link-color: #bc639b;
+$regular-link-color: white;
+$hover-link-color: white;
+
+// Bootstrap override
+$secondary: white;
+$card-bg: #bb7794;
+// this one is not a bootstrap variable
+$card-header: #6d364e;
+$card-border-color: $card-header;
+$list-group-bg: $card-bg;
+$text-muted: #dee2e6;
 
 // golden:
 // reg: #ffba00

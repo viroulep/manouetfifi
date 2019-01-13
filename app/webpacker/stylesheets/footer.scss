@@ -14,8 +14,7 @@ body {
   width: 100%;
   height: $footer-height;
   line-height: $footer-height;
-  background-color: $bg-header;
-  border-top: 2px solid $border-color;
+  background-color: $footer-bg-color;
   .container {
     text-align: center;
   }

@@ -1,3 +1,7 @@
+.card-header {
+  background-color: $card-header;
+}
+
 .custom-checkbox {
   padding-left: 15px;
   .custom-control-label {
@@ -11,59 +15,42 @@
 a {
   color: $regular-link-color;
   &:hover {
+    text-decoration: none;
+    font-weight: bold;
     color: $hover-link-color;
   }
 }
 
 .navbar.nav-test-2 {
-  background-color: $bg-header;
   .navbar-toggler {
-    border-color: $border-color;
+    border-color: $card-bg;
   }
   .navbar-toggler-icon {
+    // TODO: fix the color
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,135,211, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
   .nav-item {
     @extend .mx-2, .my-1;
-    border: 2px solid $border-color;
+    background-color: $card-bg;
     border-radius: 0.25rem;
+    font-weight: bold;
     &:hover {
-      border-color: $hover-link-color;
+      background-color: $card-header;
+      a {
+        color: $card-bg;
+      }
       .nav-link > img {
-        border-color: $hover-link-color;
+        border-color: $card-bg;
       }
     }
     .nav-link {
       @extend .px-3;
+      color: $card-header;
       img {
         @extend .rounded-circle;
-        border: 2px solid $border-color;
+        border: 2px solid $card-header;
         width: 40px;
         height: 40px;
-      }
-    }
-  }
-}
-
-.navbar.nav-test-1 {
-  background-color: $bg-header;
-  border-bottom: 2px solid $border-color;
-  .navbar-toggler {
-    border-color: $border-color;
-  }
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,135,211, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-  .nav-item {
-    img {
-      @extend .rounded-circle;
-      border: 2px solid $border-color;
-      width: 40px;
-      height: 40px;
-    }
-    &:hover {
-      img {
-        border-color: $hover-link-color;
       }
     }
   }
