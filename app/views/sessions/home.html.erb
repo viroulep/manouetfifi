@@ -1,6 +1,6 @@
 <% provide(:title, "Home") %>
 <% carousel_images = [] %>
-<% carousel_images = (1..27).map { |i| "#{root_url}/images/carousel/#{i}.jpg" } %>
+<% carousel_images = [12, *1..11, *13..25].map { |i| "#{root_url}/images/carousel/#{i}.jpg" } %>
 <%# carousel_images << "#{root_url}/images/manou_fifi_japon.jpg" %>
 <%# carousel_images << "#{root_url}/images/fifi_fred_mouchoum.jpg" %>
 <%# carousel_images << "#{root_url}/images/manou_fifi_temple.jpg" %>
@@ -34,23 +34,23 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
-        <%= public_image_tag("images/lieu.jpg", class: "rounded-circle", width: 140, height: 140) %>
-        <h2>Lieu</h2>
-        <p>du texte</p>
-        <p><%= link_to("View details", page_path("location"), class: "btn btn-secondary") %></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
         <%= public_image_tag("images/planning.jpg", class: "rounded-circle", width: 140, height: 140) %>
-        <h2>Planning des festivités</h2>
-        <p>du texte</p>
+        <h2>Quand ?</h2>
+        <p>Rendez vous le 28 août 2019</p>
         <p>
-          <%= link_to "Aller à la page dédiée", page_path("schedule"), class: "btn btn-secondary", role: "button" %>
+          <%= link_to "Voir le programme complet", page_path("schedule"), class: "btn btn-secondary", role: "button" %>
         </p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
+        <%= public_image_tag("images/maison.jpg", class: "rounded-circle", width: 140, height: 140) %>
+        <h2>Où ?</h2>
+        <p>La Boussac</p>
+        <p><%= link_to("View details", page_path("location"), class: "btn btn-secondary") %></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
         <%= public_image_tag("images/guests.jpg", class: "rounded-circle", width: 140, height: 140) %>
-        <h2>Invités</h2>
-        <p>Page en cours de construction</p>
+        <h2>Faites connaissance !</h2>
+        <p>Vous pourrez bientôt faire connaissance avec les autres invités, dès que la page sera terminée.</p>
         <%#<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>%>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
