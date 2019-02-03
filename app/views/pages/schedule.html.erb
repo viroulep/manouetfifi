@@ -1,0 +1,36 @@
+<% provide(:title, "Schedule") %>
+
+<h1>Schedule</h1>
+
+<div class="row">
+  <div class="col-12 mb-4">
+    <div class="card schedule-container">
+      <div class="card-body">
+        <h2>Mercredi 28 Août</h2>
+        <div class="main-timeline">
+          <%= render "shared/scheduled_event", icon: "venus-mars", title: "14h30 - Cérémonie civile" do %>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus
+          <% end %>
+          <%= render "shared/scheduled_event", icon: "venus-mars", title: "15h30 - Cérémonie laïque" do %>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus
+          <% end %>
+          <%= render "shared/scheduled_event", icon: "glass", title: "16h30 - Vin d'honneur" do %>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus
+          <% end %>
+          <%= render "shared/scheduled_event", icon: "cutlery", title: "20h - Diner et fête" do %>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus
+          <% end %>
+        </div>
+        <h2>Jeudi 29 Août</h2>
+        <div class="main-timeline">
+          <%= render "shared/scheduled_event", icon: "cutlery", title: "03h00 - Soupe à l'oignon" do %>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus
+          <% end %>
+          <%= render "shared/scheduled_event", icon: "cutlery", title: "13h00 - Méchoui" do %>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi dolor in, maiores natus
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
