@@ -20,7 +20,8 @@
     <meta name="author" content="Philippe Virouleau">
   </head>
 
-  <body>
+  <% has_footer ||= false %>
+  <body class="<%= "has_footer" if has_footer %>">
     <%= yield %>
   </body>
 </html>

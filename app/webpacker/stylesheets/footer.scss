@@ -4,7 +4,7 @@ html {
   position: relative;
 }
 
-body {
+body.has_footer {
   margin-bottom: $footer-height+15;
 }
 

@@ -1,7 +1,7 @@
-$bg-header: #942a57;
-//other ideas for bg header: #ff87d3
+/*$bg-header: #942a57;*/
+$bg-header: #90446b;
 $footer-height: 50px;
-$footer-bg-color: #aa5579;
+$footer-bg-color: #4b2536;
 
 $default-color: white;
 
@@ -13,7 +13,7 @@ $hover-link-color: white;
 $secondary: white;
 $card-bg: #bb7794;
 // this one is not a bootstrap variable
-$card-header: #6d364e;
+$card-header: $footer-bg-color;
 $card-border-color: $card-header;
 $list-group-bg: $card-bg;
 $text-muted: #dee2e6;

@@ -29,30 +29,33 @@
 
   <%= render 'layouts/flash' %>
 
-  <div class="container marketing">
+  <div class="container">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-      <div class="col-lg-4">
-        <%= public_image_tag("images/planning.jpg", class: "rounded-circle", width: 140, height: 140) %>
-        <h2>Quand ?</h2>
-        <p>Rendez vous le 28 août 2019</p>
-        <p>
-          <%= link_to "Voir le programme complet", page_path("schedule"), class: "btn btn-secondary", role: "button" %>
-        </p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <%= public_image_tag("images/maison.jpg", class: "rounded-circle", width: 140, height: 140) %>
-        <h2>Où ?</h2>
-        <p>La Boussac</p>
-        <p><%= link_to("View details", page_path("location"), class: "btn btn-secondary") %></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <%= public_image_tag("images/guests.jpg", class: "rounded-circle", width: 140, height: 140) %>
-        <h2>Faites connaissance !</h2>
-        <p>Vous pourrez bientôt faire connaissance avec les autres invités, dès que la page sera terminée.</p>
-        <%#<p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>%>
-      </div><!-- /.col-lg-4 -->
+      <div class="col-12 col-md-6">
+        <%= public_image_tag("images/bike_names.png", width: "90%") %>
+      </div>
+      <div class="col-12 col-md-6 infos d-flex flex-column text-center">
+        <div>
+          Mercredi
+          <br/>
+          28 Août 2019
+          <hr/>
+        </div>
+        <div>
+          La Boussac <%= public_image_tag("images/france.png", width: "80px") %>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 mt-2">
+        <%= link_to("Planning", page_path("schedule"), class: "btn btn-custom mx-auto w-100") %>
+      </div>
+      <div class="col-12 col-sm-4 mt-2">
+        <%= link_to("Lieux importants", page_path("location"), class: "btn btn-custom mx-auto w-100") %>
+      </div>
+      <div class="col-12 col-sm-4 my-2">
+        <%= link_to("Se loger", page_path("under_construction"), class: "btn btn-custom mx-auto w-100") %>
+      </div>
     </div><!-- /.row -->
   </div>
 </div>

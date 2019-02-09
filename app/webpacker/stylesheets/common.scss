@@ -21,6 +21,10 @@ a {
   }
 }
 
+.btn-custom {
+    @include button-variant($footer-bg-color, $footer-bg-color, darken($footer-bg-color, 10%), lighten($footer-bg-color,5%), lighten($footer-bg-color, 10%), darken($footer-bg-color,10%));
+}
+
 .navbar {
   .navbar-toggler {
     border-color: $card-bg;
