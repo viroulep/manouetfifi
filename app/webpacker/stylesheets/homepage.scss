@@ -3,6 +3,20 @@
     bottom: 2rem;
     z-index: 10;
   }
+  .language-indicators {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -32px;
+    z-index: 10;
+    .btn {
+      padding: 3px 6px;
+      .flag-icon {
+        line-height: 32px;
+        width: 32px;
+      }
+    }
+  }
 
   /* Declare heights because of positioning of img element */
   .carousel-item {

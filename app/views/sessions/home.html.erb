@@ -1,17 +1,23 @@
 <% provide(:title, "Home") %>
 <% carousel_images = [] %>
-<% carousel_images = [12, *1..11, *13..25].map { |i| "#{root_url}/images/carousel/#{i}.jpg" } %>
+<% carousel_images = [12, *1..11, *13..25].map { |i| "#{public_image_url("images/carousel/#{i}.jpg")}" } %>
 <%# carousel_images << "#{root_url}/images/manou_fifi_japon.jpg" %>
 <%# carousel_images << "#{root_url}/images/fifi_fred_mouchoum.jpg" %>
 <%# carousel_images << "#{root_url}/images/manou_fifi_temple.jpg" %>
 
 <div id="homepage">
-  <div id="carousel-homepage" class="carousel slide" data-ride="carousel" data-interval="3500">
+  <div id="carousel-homepage" class="carousel slide mb-5 mb-sm-4" data-ride="carousel" data-interval="3500">
     <ol class="carousel-indicators">
       <% carousel_images.each_with_index do |_, i| %>
         <li data-target="#carousel-homepage" data-slide-to="<%= i %>" class="<%= 'active' if i == 0 %>"></li>
       <% end %>
     </ol>
+    <div class="language-indicators d-flex justify-content-center">
+      <% Locales::AVAILABLE.each do |l, data| %>
+        <%# flag_icon(data[:flag_id]) %>
+        <%= link_to flag_icon(data[:flag_id]), url_for(locale: l), class: "btn btn-custom mx-3" %>
+      <% end %>
+    </div>
     <div class="carousel-inner">
       <% carousel_images.each_with_index do |url, i| %>
         <%= render "carousel_item", url: url, active: i == 0 %>
@@ -38,23 +44,23 @@
       </div>
       <div class="col-12 col-md-6 infos d-flex flex-column text-center">
         <div>
-          Mercredi
+          <%= t 'homepage.day' %>
           <br/>
-          28 Août 2019
+          <%= t 'homepage.date' %>
           <hr/>
         </div>
         <div>
-          La Boussac <%= public_image_tag("images/france.png", width: "80px") %>
+          <%= t 'homepage.town' %> <%= public_image_tag("images/france.png", width: "80px") %>
         </div>
       </div>
       <div class="col-12 col-sm-4 mt-2">
-        <%= link_to("Planning", page_path("schedule"), class: "btn btn-custom mx-auto w-100") %>
+        <%= link_to(t('navigation.schedule'), page_path("schedule"), class: "btn btn-custom mx-auto w-100") %>
       </div>
       <div class="col-12 col-sm-4 mt-2">
-        <%= link_to("Lieux importants", page_path("location"), class: "btn btn-custom mx-auto w-100") %>
+        <%= link_to(t('homepage.main_places'), page_path("location"), class: "btn btn-custom mx-auto w-100") %>
       </div>
       <div class="col-12 col-sm-4 my-2">
-        <%= link_to("Se loger", page_path("under_construction"), class: "btn btn-custom mx-auto w-100") %>
+        <%= link_to(t('navigation.accommodation'), page_path("under_construction"), class: "btn btn-custom mx-auto w-100") %>
       </div>
     </div><!-- /.row -->
   </div>

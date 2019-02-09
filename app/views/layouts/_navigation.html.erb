@@ -10,39 +10,51 @@
           <li class="nav-item">
             <%= link_to root_url, class: "nav-link" do %>
               <%= public_image_tag("images/maison.jpg") %>
-              Accueil
+              <%= t 'navigation.home' %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to page_path("location"), class: "nav-link" do %>
               <!-- GwenofGwened [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], from Wikimedia Commons -->
               <%= public_image_tag("images/gwenn_ha_du.png") %>
-              Lieu
+              <%= t 'navigation.places' %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to page_path("under_construction"), class: "nav-link" do %>
               <%= public_image_tag("images/maison.jpg") %>
-              Se loger
+              <%= t 'navigation.accommodation' %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to page_path("schedule"), class: "nav-link" do %>
               <%= public_image_tag("images/planning.jpg") %>
-              Planning
+              <%= t 'navigation.schedule' %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to page_path("under_construction"), class: "nav-link" do %>
               <%= public_image_tag("images/guests.jpg") %>
-              Invités
+              <%= t 'navigation.guests' %>
             <% end %>
           </li>
           <li class="nav-item">
             <%= link_to page_path("under_construction"), class: "nav-link" do %>
               <%= public_image_tag("images/contact.jpg") %>
-              Contact
+              <%= t 'navigation.contact' %>
             <% end %>
+          </li>
+          <li class="nav-item dropdown d-flex">
+            <a href="#" class="dropdown-toggle ml-4 mx-sm-2 my-2 my-sm-auto" data-toggle="dropdown" data-hover="dropdown">
+              <% active_locale_info = Locales::AVAILABLE[I18n.locale] %>
+              <%= flag_icon(active_locale_info[:flag_id]) %>
+              <span class="caret"></span>
+            </a>
+            <div class="dropdown-menu" role="menu">
+              <% Locales::AVAILABLE.each do |l, data| %>
+                <%= link_to flag_icon(data[:flag_id]), url_for(locale: l), class: "nav-link dropdown-item" %>
+              <% end %>
+            </div>
           </li>
         </ul>
       </div>

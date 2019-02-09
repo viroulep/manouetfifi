@@ -71,7 +71,7 @@ module ApplicationHelper
   end
 
   def public_image_url(url)
-    "#{root_url}/#{url}"
+    "#{root_url(locale: nil)}#{url}"
   end
 
   def public_image_tag(url, **tag_options)

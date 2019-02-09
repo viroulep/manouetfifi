@@ -1,0 +1,13 @@
+fr:
+  homepage:
+    main_places: "Lieux importants"
+    day: "Mercredi"
+    date: "28 Août 2019"
+    town: "La Boussac"
+  navigation:
+    home: "Accueil"
+    places: "Lieux"
+    accommodation: "Se loger"
+    schedule: "Planning"
+    guests: "Invités"
+    contact: "Contact"

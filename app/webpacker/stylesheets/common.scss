@@ -57,6 +57,21 @@ a {
         height: 40px;
       }
     }
+    &.dropdown {
+      .dropdown-toggle:hover, &.show > .dropdown-toggle {
+        color: $card-bg;
+      }
+      .dropdown-toggle {
+        color: $card-header;
+      }
+      .dropdown-menu {
+        background-color: $card-bg;
+        min-width: auto;
+        .dropdown-item:hover {
+          background-color: $card-header;
+        }
+      }
+    }
   }
 }
 
