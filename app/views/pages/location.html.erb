@@ -3,49 +3,48 @@
 <h1>À La Boussac</h1>
 
 <div class="row">
-  <div class="col-md-6 col-xs-12 col-lg-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        La mairie
-      </div>
-      <%= public_image_tag("images/lieu.jpg", class: "card-img-top") %>
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6 col-xs-12 col-lg-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        La maison familiale
-      </div>
-      <%= public_image_tag("images/maison.jpg", class: "card-img-top") %>
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6 col-xs-12 col-lg-4 mb-4">
-    <div class="card">
-      <div class="card-header">
-        La salle des fêtes
-      </div>
-      <%= public_image_tag("images/salle_fete.jpg", class: "card-img-top") %>
-      <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      </div>
-    </div>
-  </div>
   <div class="col-12 mb-4">
     <div class="card">
       <div class="card-header">
         Plan
       </div>
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-secondary">Go somewhere</a>
+        <p>
+        Comme vous pouvez le constater sur la carte ci-dessous, vous n'aurez aucun mal à vous déplacer à pied d'un endroit important du mariage à un autre !
+        </p>
+        <div id="map-laboussac"></div>
       </div>
     </div>
   </div>
+  <%= render("shared/location_card", id: "mairie", title: "La mairie",
+    image: "images/lieu.jpg", text: "Some quick example text to build on the card title and make up the bulk of the card's content.") %>
+  <%= render("shared/location_card", id: "maison", title: "La maison familiale",
+    image: "images/maison.jpg",
+    text: "Some quick example text to build on the card title and make up the bulk of the card's content.") %>
+  <%= render("shared/location_card", id: "salle", title: "La salle des fêtes",
+    image: "images/salle_fete.jpg", text: "Some quick example text to build on the card title and make up the bulk of the card's content.") %>
 </div>
+
+<% content_for :additional_scripts do %>
+  <%= javascript_pack_tag "leaflet-map", 'data-turbolinks-track': 'reload'  %>
+  <%= stylesheet_pack_tag "leaflet-map", 'data-turbolinks-track': 'reload'  %>
+<% end %>
+<script>
+$(function() {
+  let coord = [48.5121422,-1.6581];
+  let map = window.manouetfifi.createLeafletMap("map-laboussac", coord);
+  map.setZoom(16);
+  window.manouetfifi.placeMarker(map,
+      [48.513187, -1.660632],
+      "Mairie",
+      "C'est là qu'on se marie", "mairie", "mairie");
+  window.manouetfifi.placeMarker(map,
+      [48.51071,-1.65863],
+      "Maison familiale",
+      "Cérémonie laïque, cocktail, photos", "maison", "maison");
+  window.manouetfifi.placeMarker(map,
+      [48.51173,-1.65548],
+      "Salle des fêtes",
+      "Diner et fête", "salle", "salle");
+});
+</script>
