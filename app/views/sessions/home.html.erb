@@ -15,7 +15,7 @@
     <div class="language-indicators d-flex justify-content-center">
       <% Locales::AVAILABLE.each do |l, data| %>
         <%# flag_icon(data[:flag_id]) %>
-        <%= link_to flag_icon(data[:flag_id]), url_for(locale: l), class: "btn btn-custom mx-3" %>
+        <%= link_to flag_icon(data[:flag_id]), root_url(locale: l), class: "btn btn-custom mx-3" %>
       <% end %>
     </div>
     <div class="carousel-inner">
