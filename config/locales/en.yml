@@ -1,13 +1,77 @@
 en:
   homepage:
-    main_places: "Around La Boussac"
-    day: "Wednesday"
-    date: "August 28th, 2019"
-    town: "La Boussac"
+    #original_hash: a858cd7
+    main_places: Around La Boussac
+    #original_hash: 382dd2f
+    day: Wednesday
+    #original_hash: 0306e7e
+    date: 'August 28th, 2019'
+    #original_hash: 16c3f1f
+    town: La Boussac
   navigation:
-    home: "Home"
-    places: "Places"
-    accommodation: "Accommodation"
-    schedule: "Schedule"
-    guests: "Guests"
-    contact: "Contact"
+    #original_hash: a8ff8fd
+    home: Home
+    #original_hash: d5f6ad1
+    places: Places
+    #original_hash: 4b5ee3e
+    accommodation: Accommodation
+    #original_hash: 0005027
+    schedule: Schedule
+    #original_hash: 642275f
+    guests: Guests
+    #original_hash: b37456c
+    contact: Contact
+  pages:
+    contact:
+      #original_hash: b37456c
+      title: Contact
+      #original_hash: f02ffb6
+      header: Contact us
+      #original_hash: 594534e
+      info_text_html: >-
+        If you want to RSVP, or simply contact us to get more information, you
+        can do so by writing an email to the two following addresses:<br/>
+      list:
+        #original_hash: 45581a2
+        title: Wedding list
+        #original_hash: d018b97
+        text_html: >-
+          We have no wedding list.<br/>We suggest you to contribute to our
+          honeymoon which will take place in Mauritius. We will place a box in
+          which you will be able to drop any contribution you would want
+          (alternatively, you can also give us a hug!).
+    under_construction:
+      #original_hash: 6e4d427
+      title: Work in progress
+      #original_hash: d22b5a3
+      text: 'This page is still a work in progress, please come back later!'
+    location:
+      #original_hash: e86a621
+      title: Main places
+      #original_hash: 1224d74
+      location_tab_title: Main places in La Boussac
+      #original_hash: 0f50534
+      howto_tab_title: How to come
+      #original_hash: ae2f98a
+      map: Map
+      #original_hash: cf52a02
+      map_desc: >-
+        The map below sums up the 3 main places where parts of the wedding will
+        take place. As you can see, you will have no trouble walking from one
+        place to another!
+      mairie:
+        #original_hash: cefd565
+        title: City Hall
+        #original_hash: 3d15307
+        text_html: >-
+          The civil ceremony will take place there. Full address:<br/>13 Rue du
+          Mont Saint-Michel<br/>35120 La Boussac
+        #original_hash: 27655fd
+        marker_text: Civil ceremony
+      maison:
+        #original_hash: 59d6f72
+        title: Family house
+        #original_hash: 818d158
+        text_html: >-
+          The secular ceremony and the cocktail will take place there.<br/>Full
+          address:<br/>13 rue de la Croix Bouéssée<br/>35120 La Boussac
