@@ -12,6 +12,16 @@ fr:
     guests: "Invités"
     contact: "Contact"
   pages:
+    contact:
+      title: "Contact"
+      header: "Nous contacter"
+      info_text_html: >-
+        Si vous souhaitez répondre à votre invitation, ou tout simplement nous contacter pour avoir des informations, vous pouvez le faire en écrivant par mail aux deux adresses suivantes :<br/>
+      list:
+        title: "Liste de mariage"
+        text_html: >-
+          Nous n’avons pas de liste de mariage.<br/>
+          Nous vous proposons de contribuer à notre voyage de noce qui aura lieu à l'ile Maurice. Pour cela, nous mettrons à disposition une boite dans laquelle vous pourrez y glisser votre cadeau si vous le souhaitez (alternativement, vous pouvez aussi nous faire des bisous).
     under_construction:
       title: "Page en construction"
       text: "Cette page est toujours en construction, revenez plus tard !"
