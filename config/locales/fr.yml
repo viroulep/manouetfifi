@@ -19,15 +19,15 @@ fr:
       map_desc: "Le plan ci-dessous résume les 3 endroits importants où se dérouleront une partie du mariage. Comme vous pouvez le constater, vous n'aurez aucun mal à vous déplacer à pied d'un endroit à un autre !"
       mairie:
         title: "La mairie"
-        text: "La cérémonie civile y aura lieu. L'adresse exacte est TODO"
+        text_html: "C'est là où aura lieu la cérémonie civile. Adresse exacte :<br/>13 Rue du Mont Saint-Michel<br/>35120 La Boussac"
         marker_text: "Cérémonie civile"
       maison:
         title: "La maison familiale"
-        text: "C'est là où se déroulera la cérémonie laïque ainsi que le vin d'honneur. Adresse exacte : TODO"
+        text_html: "C'est là où se déroulera la cérémonie laïque ainsi que le vin d'honneur.<br/>Adresse exacte :<br/>13 rue de la Croix Bouéssée<br/>35120 La Boussac"
         marker_text: "Cérémonie laïque, vin d'honneur, photos"
       salle:
         title: "La salle des fêtes"
-        text: "Rendez-vous là bas dès 20h pour le dîner ! N'oubliez pas la soupe à l'oignon tard dans la nuit et le méchoui le lendemain !"
+        text_html: "Rendez-vous là bas dès 20h pour le dîner !<br/>N'oubliez pas la soupe à l'oignon tard dans la nuit et le méchoui le lendemain !<br/>Adresse exacte:<br/>Rue de Fougères<br/>35120 La Boussac"
         marker_text: "Dîner et fête"
     schedule:
       title: "Planning"

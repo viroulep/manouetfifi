@@ -22,7 +22,7 @@
   </div>
   <% places.keys.each do |place| %>
     <%= render("shared/location_card", id: place, title: t(".#{place}.title"),
-               image: "images/#{place}.jpg", text: t(".#{place}.text")) %>
+               image: "images/#{place}.jpg", text: t(".#{place}.text_html")) %>
   <% end %>
 </div>
 
