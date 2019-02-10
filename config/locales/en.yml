@@ -75,3 +75,150 @@ en:
         text_html: >-
           The secular ceremony and the cocktail will take place there.<br/>Full
           address:<br/>13 rue de la Croix Bouéssée<br/>35120 La Boussac
+        #original_hash: 26e8289
+        marker_text: 'Secular ceremony, cocktail, photo-shoot'
+      salle:
+        #original_hash: 59dbd00
+        title: Hall
+        #original_hash: f1e579c
+        text_html: >-
+          Meet us there from 8 pm for diner!<br/>Don't forget the onion soup
+          late in the night, and the méchoui on the next day!<br/>Full
+          address:<br/>Rue de Fougères<br/>35120 La Boussac
+        #original_hash: 8873bad
+        marker_text: Diner and party
+      travelling:
+        by_car:
+          #original_hash: 9f4ac49
+          title: By car
+          #original_hash: 43505c8
+          text_html: >-
+            It's the most convenient way to come!<br/>La Boussac is not on any
+            main road, so trust your GPS (see the other tab for the full
+            addresses of all the main places in La Boussac).<br/>If you're
+            leaving from a place where a lot of our guests live (ie: Paris,
+            Grenoble, or Nantes) and you still have spots in the car, please let
+            us know so that we could inform potentially interested people.
+        by_train:
+          #original_hash: 99c2c8c
+          title: By train
+          #original_hash: 37e1054
+          text_html: >-
+            Unless you plan on coming on your own once in Rennes, <b>DO NOT take
+            the train and stop in Rennes</b>.<br/>The closest train station to
+            La Boussac is <b>Dol-de-Bretagne</b>.<br/>It is on the direct train
+            service between Paris and Saint-Malo, and is a 10 minutes drive from
+            La Boussac.<br/>It's the most convenient options <b>both for you and
+            for us</b>.<br/>We can organize shuttles between Dol and La Boussac,
+            just let us know so that we can synchronize everyone.
+        by_carpooling:
+          #original_hash: d78e150
+          title: By carpooling
+          #original_hash: d02dee4
+          text_html: >-
+            If you live in Paris, Grenoble, or Nantes it's very likely someone
+            else is coming by car. If you drop us a mail we could put you in
+            touch with people having available spots in their
+            cars.<br/>Alternatively you can check out <a
+            href="https://www.blablacar.fr" target="_blank">Blablacar</a>. If no
+            one goes through La Boussac, try to get dropped in <b>Dol de
+            Bretagne</b>.
+        by_plane:
+          #original_hash: a84af2e
+          title: By plane
+          #original_hash: 030a701
+          text_html: >-
+            The closest airport is in Rennes, but the most convenient is likely
+            Paris.<br/>If you intend to finish your travel by train, keep in
+            mind to take a look at the relevant section ;)
+    schedule:
+      #original_hash: 0005027
+      title: Schedule
+      #original_hash: cde286c
+      header: Party schedule
+      #original_hash: b3caf16
+      wednesday: Wednesday August 28th
+      #original_hash: 6ecce46
+      thursday: Thursday August 29th
+      mairie:
+        #original_hash: 7d529fc
+        title: '02:30 pm - Civil ceremony'
+        #original_hash: 1b6a824
+        link_text: La Boussac city hall
+        #original_hash: 067906f
+        text_html: 'The wedding''s civil ceremony will take place in %{link}.'
+      ceremonie:
+        #original_hash: 9c8faa0
+        title: '03:30 pm - Secular ceremony'
+        #original_hash: 6dc9de2
+        link_text: family house
+        #original_hash: 6be4dd3
+        text_html: >-
+          A secular ceremony will be held in the %{link}'s garden.<br/>The
+          ceremony will be conducted both in French and English.
+      cocktail:
+        #original_hash: af17c82
+        title: '04:30 pm - Cocktail'
+        #original_hash: 13fe95a
+        text_html: >-
+          After the secular ceremony you will be able to enjoy a cocktail that
+          will be organized at the same place.<br/>We'll take this opportunity
+          to shoot some souvenir pictures!
+      diner:
+        #original_hash: b6f2514
+        title: '08:00 pm - Diner and party'
+        #original_hash: e0d1099
+        link_text: hall of La Boussac
+        #original_hash: 404eabd
+        text_html: >-
+          The wedding party will start at 8 pm in the %{link}.<br/>Diner will be
+          served as a buffet, during which you will be welcome to try some
+          regional specialties (brought by the bridegrooms and some of the
+          guests!).
+      soupe:
+        #original_hash: de6da61
+        title: '03:00 am - Onion soup'
+        #original_hash: 2e30207
+        text_html: >-
+          Do you usually fancy a little snack during the night? Onions, (salted)
+          butter, water, white wine, and some shredded cheese will cheer you up!
+      mechoui:
+        #original_hash: bfd34bd
+        title: '01:00 pm - Méchoui'
+        #original_hash: e0d1099
+        link_text: hall of La Boussac
+        #original_hash: f0bd7f4
+        text_html: >-
+          We hope to see you again the next day from 1 pm to share a lamb
+          roasted on a spit in the %{link}.<br/>There will be an alternate
+          (veggie) dish for our friends who don't eat lamb.
+    accommodation:
+      #original_hash: 4b5ee3e
+      title: Accommodation
+      #original_hash: 4b5ee3e
+      header: Accommodation
+      camping:
+        #original_hash: 5e89349
+        header: Camping
+        la_boussac:
+          #original_hash: b71ba1d
+          header: In La Boussac
+          #original_hash: 0aaa423
+          text_html: >-
+            It's the only free option, and it's also the closest to the Hall and
+            to the family house!<br/>Obviously the comfort has to be cut down a
+            little, but to be honest, at 4 am during the party night, your floor
+            mat will feel as comfy as a top-notch 4 stars hotel.<br/>We have
+            several spaces for tents, please contact us if you are interested.
+      gites:
+        #original_hash: 5b76a36
+        header: Bed and breakfast
+        #original_hash: 29582e7
+        map: Go at the bottom of the page to get these options on a map.
+      hotels:
+        #original_hash: fcc6f57
+        header: Hotels
+        #original_hash: 032a2fc
+        text_html: >-
+          The area is pretty touristic, so you will find a large choice of
+          hotels along the bay of Mont Saint-Michel!
