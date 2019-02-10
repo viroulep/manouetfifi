@@ -2,7 +2,7 @@
 <% carousel_images = (1..5).map { |i| "#{public_image_url("images/carousel/#{i}.jpg")}" } %>
 
 <div id="homepage">
-  <div id="carousel-homepage" class="carousel slide mb-5 mb-sm-4" data-ride="carousel" data-interval="3500">
+  <div id="carousel-homepage" class="carousel slide mb-5 mb-sm-4" data-ride="carousel" data-interval="4000">
     <ol class="carousel-indicators">
       <% carousel_images.each_with_index do |_, i| %>
         <li data-target="#carousel-homepage" data-slide-to="<%= i %>" class="<%= 'active' if i == 0 %>"></li>
@@ -60,3 +60,15 @@
     </div><!-- /.row -->
   </div>
 </div>
+<script>
+$(function() {
+  // Lazy load the images to avoid bandwidth waste on mobile
+  $("#carousel-homepage").on("slide.bs.carousel", function(ev) {
+    var img = $(ev.relatedTarget).find(".carousel-image[data-url]");
+    if (img.length != 0) {
+      img.css("background-image", "url(" + img.data('url') + ")");
+      img.removeAttr("data-url");
+    }
+  });
+});
+</script>
