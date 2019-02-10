@@ -1,9 +1,5 @@
 <% provide(:title, "Home") %>
-<% carousel_images = [] %>
-<% carousel_images = [12, *1..11, *13..25].map { |i| "#{public_image_url("images/carousel/#{i}.jpg")}" } %>
-<%# carousel_images << "#{root_url}/images/manou_fifi_japon.jpg" %>
-<%# carousel_images << "#{root_url}/images/fifi_fred_mouchoum.jpg" %>
-<%# carousel_images << "#{root_url}/images/manou_fifi_temple.jpg" %>
+<% carousel_images = (1..5).map { |i| "#{public_image_url("images/carousel/#{i}.jpg")}" } %>
 
 <div id="homepage">
   <div id="carousel-homepage" class="carousel slide mb-5 mb-sm-4" data-ride="carousel" data-interval="3500">
@@ -14,7 +10,6 @@
     </ol>
     <div class="language-indicators d-flex justify-content-center">
       <% Locales::AVAILABLE.each do |l, data| %>
-        <%# flag_icon(data[:flag_id]) %>
         <%= link_to flag_icon(data[:flag_id]), root_url(locale: l), class: "btn btn-custom mx-3" %>
       <% end %>
     </div>
