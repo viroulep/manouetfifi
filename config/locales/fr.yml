@@ -11,3 +11,21 @@ fr:
     schedule: "Planning"
     guests: "Invités"
     contact: "Contact"
+  pages:
+    location:
+      title: "Les lieux importants"
+      header: "Les lieux importants à La Boussac"
+      map: "Plan"
+      map_desc: "Le plan ci-dessous résume les 3 endroits importants où se dérouleront une partie du mariage. Comme vous pouvez le constater, vous n'aurez aucun mal à vous déplacer à pied d'un endroit à un autre !"
+      mairie:
+        title: "La mairie"
+        text: "La cérémonie civile y aura lieu. L'adresse exacte est TODO"
+        marker_text: "Cérémonie civile"
+      maison:
+        title: "La maison familiale"
+        text: "C'est là où se déroulera la cérémonie laïque ainsi que le vin d'honneur. Adresse exacte : TODO"
+        marker_text: "Cérémonie laïque, vin d'honneur, photos"
+      salle:
+        title: "La salle des fêtes"
+        text: "Rendez-vous là bas dès 20h pour le dîner ! N'oubliez pas la soupe à l'oignon tard dans la nuit et le méchoui le lendemain !"
+        marker_text: "Dîner et fête"

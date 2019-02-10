@@ -1,29 +1,29 @@
-<% provide(:title, "Les lieux importants") %>
+<% provide(:title, t('.title')) %>
 
-<h1>À La Boussac</h1>
+<h1><%= t '.header' %></h1>
+
+<% places={
+  "mairie" => [48.513187, -1.660632],
+  "maison" => [48.51071, -1.65863],
+  "salle" => [48.51173, -1.65548],
+} %>
 
 <div class="row">
   <div class="col-12 mb-4">
     <div class="card">
       <div class="card-header">
-        Plan
+        <%= t '.map' %>
       </div>
       <div class="card-body">
-        <p>
-        Le plan ci-dessous résume les 3 endroits importants où se dérouleront une partie du mariage.
-        Comme vous pouvez le constater, vous n'aurez aucun mal à vous déplacer à pied d'un endroit à un autre !
-        </p>
+        <p><%= t '.map_desc' %></p>
         <div id="map-laboussac"></div>
       </div>
     </div>
   </div>
-  <%= render("shared/location_card", id: "mairie", title: "La mairie",
-    image: "images/mairie.jpg", text: "Some quick example text to build on the card title and make up the bulk of the card's content.") %>
-  <%= render("shared/location_card", id: "maison", title: "La maison familiale",
-    image: "images/maison.jpg",
-    text: "Some quick example text to build on the card title and make up the bulk of the card's content.") %>
-  <%= render("shared/location_card", id: "salle", title: "La salle des fêtes",
-    image: "images/salle_fete.jpg", text: "Some quick example text to build on the card title and make up the bulk of the card's content.") %>
+  <% places.keys.each do |place| %>
+    <%= render("shared/location_card", id: place, title: t(".#{place}.title"),
+               image: "images/#{place}.jpg", text: t(".#{place}.text")) %>
+  <% end %>
 </div>
 
 <% content_for :additional_scripts do %>
@@ -35,17 +35,11 @@ $(function() {
   let coord = [48.5121422,-1.6581];
   let map = window.manouetfifi.createLeafletMap("map-laboussac", coord);
   map.setZoom(16);
-  window.manouetfifi.placeMarker(map,
-      [48.513187, -1.660632],
-      "Mairie",
-      "C'est là qu'on se marie", "mairie", "mairie");
-  window.manouetfifi.placeMarker(map,
-      [48.51071,-1.65863],
-      "Maison familiale",
-      "Cérémonie laïque, cocktail, photos", "maison", "maison");
-  window.manouetfifi.placeMarker(map,
-      [48.51173,-1.65548],
-      "Salle des fêtes",
-      "Diner et fête", "salle", "salle");
+  <% places.each do |place, coords| %>
+    window.manouetfifi.placeMarker(map,
+        [<%= coords.join(",") %>],
+        "<%= t(".#{place}.title") %>",
+        "<%= t(".#{place}.marker_text") %>", "<%= place %>", "<%= place %>");
+  <% end %>
 });
 </script>
