@@ -56,3 +56,20 @@ fr:
         title: "13h00 - Méchoui"
         link_text: "salle des fêtes de La Boussac"
         text_html: "Nous esperons vous revoir le lendemain à partir de 13h pour partager un agneau à la broche à la %{link}.<br/>Pour nos amis qui ne mangent pas d'agneau, un choix alternatif (végétarien) sera disponible."
+    accommodation:
+      title: "Se loger"
+      header: "Se loger"
+      camping:
+        header: "Camping"
+        la_boussac:
+          header: "À La Boussac"
+          text_html: >-
+            C'est la seule option de logement gratuite, et en plus elle est juste à côté de la salle et de la maison familiale !<br/>
+            Alors évidemment il faut sacrifier un peu de confort, mais de toute façon la nuit du mariage à 4 heures du matin votre tapis de sol vous paraîtra aussi comfortable que le matelas d'un hôtel 4 étoiles.<br/>
+            Nous avons plusieurs espaces où planter des tentes, contactez-nous pour en savoir plus si vous êtes intéressés.
+      gites:
+        header: "Gites et chambres d'hôtes"
+        map: "Rendez-vous en bas de la page pour voir les différentes options sur une carte."
+      hotels:
+        header: "Hôtels"
+        text_html: "La région étant assez touristique, vous pourrez trouver un large choix d'hôtels dans la baie du Mont Saint-Michel !"

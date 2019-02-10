@@ -18,6 +18,10 @@ $card-border-color: $card-header;
 $list-group-bg: $card-bg;
 $text-muted: #dee2e6;
 
+$list-group-bg: $footer-bg-color;
+$list-group-hover-bg: lighten($list-group-bg, 10%);
+$list-group-action-color: $regular-link-color;
+
 // golden:
 // reg: #ffba00
 // hover: #b78500

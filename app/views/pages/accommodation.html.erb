@@ -1,0 +1,100 @@
+<% provide(:title, t('.title')) %>
+
+<% gites= {
+  "Épiniac" => [
+    {
+      name: "La vallée de Cadran",
+      url: "http://www.vallee-de-cadran.com/",
+      pos: [48.505641, -1.677133],
+    },
+  ],
+  "Baguer Pican" => [
+    {
+      name: "Le Jardin de Coramille",
+      url: "http://www.jardin-coramille.com/",
+      pos: [48.544116, -1.713667],
+    },
+    {
+      name: "Les Prés de Coat Argae",
+      url: "https://www.chambres-hotes.fr/chambres-hotes_les-pres-de-coat-argae_baguer-pican_27229.htm",
+      pos: [48.544115, -1.719486],
+    },
+    {
+      name: "Gîtes du Vieux Presbytère",
+      url: "https://www.gites.fr/gites_gites-du-vieux-presbytere_baguer-pican_h1419429.htm",
+      pos: [48.548700, -1.695460],
+    },
+  ],
+  "Dol de Bretagne" => [
+    {
+      name: "La Loubatais",
+      url: "https://www.chambres-hotes.fr/chambres-hotes_chambres-d-hotes-la-loubatais_dol-de-bretagne_h332612.htm",
+      pos: [48.532310, -1.778850],
+    },
+    {
+      name: "Manoir de la Bégaudière",
+      url: "http://www.manoirdelabegaudiere.com/",
+      pos: [48.555115, -1.766796],
+    },
+  ],
+} %>
+
+<h1 class="mb-3"><%= t '.header' %></h1>
+
+<div class="card mb-3">
+  <div class="card-header">
+    <h3><%= t '.camping.header' %></h3>
+  </div>
+  <div class="card-body">
+    <h4><%= t '.camping.la_boussac.header' %></h4>
+    <p><%= t '.camping.la_boussac.text_html' %></p>
+  </div>
+</div>
+<div class="card mb-3">
+  <div class="card-header">
+    <h3><%= t '.gites.header' %></h3>
+  </div>
+  <div class="card-body">
+    <p><%= t '.gites.map' %></p>
+    <% gites.each do |city, options| %>
+      <h4><%= city %></h4>
+      <div class="list-group mb-4">
+        <% options.each do |g| %>
+          <%= link_to(g[:name], g[:url], target: "_blank", class: "list-group-item list-group-item-action") %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="card mb-3">
+  <div class="card-header">
+    <h3><%= t '.hotels.header' %></h3>
+  </div>
+  <div class="card-body">
+    <%= t '.hotels.text_html' %>
+  </div>
+</div>
+<div class="card">
+  <div id="map-accommodations"></div>
+</div>
+<% content_for :additional_scripts do %>
+  <%= javascript_pack_tag "leaflet-map", 'data-turbolinks-track': 'reload'  %>
+  <%= stylesheet_pack_tag "leaflet-map", 'data-turbolinks-track': 'reload'  %>
+<% end %>
+<script>
+$(function() {
+  let coord = [48.5121422,-1.719486];
+  let map = window.manouetfifi.createLeafletMap("map-accommodations", coord);
+  map.setZoom(12);
+  // Maison
+  window.manouetfifi.placeMarker(map, [48.51071, -1.65863],
+    "<%= t("pages.location.maison.title") %>",
+    "", "mairie");
+
+  <% gites.values.flatten.each do |gite| %>
+    window.manouetfifi.placeMarker(map, [<%= gite[:pos].join(",") %>],
+        '<%= link_to(gite[:name], gite[:url], target: "_blank") %>',
+        "");
+  <% end %>
+});
+</script>

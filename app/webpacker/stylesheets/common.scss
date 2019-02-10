@@ -1,5 +1,9 @@
-.card-header {
-  background-color: $card-header;
+.card {
+  color: $footer-bg-color;
+  .card-header {
+    color: $default-color;
+    background-color: $card-header;
+  }
 }
 
 .custom-checkbox {
@@ -23,61 +27,6 @@ a {
 
 .btn-custom {
     @include button-variant($footer-bg-color, $footer-bg-color, darken($footer-bg-color, 10%), lighten($footer-bg-color,5%), lighten($footer-bg-color, 10%), darken($footer-bg-color,10%));
-}
-
-.navbar {
-  .navbar-toggler {
-    border-color: $card-bg;
-  }
-  .navbar-toggler-icon {
-    // TODO: fix the color
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,135,211, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-  }
-  .nav-item {
-    @extend .mx-2, .my-1;
-    background-color: $card-bg;
-    border-radius: 0.25rem;
-    font-weight: bold;
-    &:hover {
-      background-color: $card-header;
-      a {
-        color: $card-bg;
-      }
-      .nav-link > img, .nav-link > .icon-container {
-        border-color: $card-bg;
-      }
-    }
-    .nav-link {
-      @extend .px-3;
-      color: $card-header;
-      line-height: 40px;
-      img, .icon-container {
-        @extend .rounded-circle;
-        border: 2px solid $card-header;
-        width: 40px;
-        height: 40px;
-        display: inline-block;
-        i {
-          font-size: 30px;
-        }
-      }
-    }
-    &.dropdown {
-      .dropdown-toggle:hover, &.show > .dropdown-toggle {
-        color: $card-bg;
-      }
-      .dropdown-toggle {
-        color: $card-header;
-      }
-      .dropdown-menu {
-        background-color: $card-bg;
-        min-width: auto;
-        .dropdown-item:hover {
-          background-color: $card-header;
-        }
-      }
-    }
-  }
 }
 
 .avatar-thumbnail {
