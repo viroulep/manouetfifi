@@ -5,7 +5,7 @@ pull_latest() {
 }
 
 bootstrap_rails() {
-  gem install bundler
+  gem install bundler -v '1.16.5'
   gem install pg -v '1.0.0'
   bundle install --path=vendor/bundle
   echo "SECRET_KEY_BASE=`bin/rails secret`" >> .env.production
