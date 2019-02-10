@@ -43,18 +43,23 @@ a {
       a {
         color: $card-bg;
       }
-      .nav-link > img {
+      .nav-link > img, .nav-link > .icon-container {
         border-color: $card-bg;
       }
     }
     .nav-link {
       @extend .px-3;
       color: $card-header;
-      img {
+      line-height: 40px;
+      img, .icon-container {
         @extend .rounded-circle;
         border: 2px solid $card-header;
         width: 40px;
         height: 40px;
+        display: inline-block;
+        i {
+          font-size: 30px;
+        }
       }
     }
     &.dropdown {

@@ -66,8 +66,8 @@ module ApplicationHelper
     content_tag :span, "", html_options
   end
 
-  def fa_icon(id)
-    content_tag :i, "", class: "fa fa-#{id}"
+  def fa_icon(id, html_options = {})
+    content_tag :i, "", class: "fa fa-#{id} #{html_options[:class]}"
   end
 
   def public_image_url(url)

@@ -1,0 +1,10 @@
+<li class="nav-item">
+  <%= link_to path, class: "nav-link d-flex" do %>
+    <div class="icon-container d-flex mr-1">
+      <%= fa_icon(icon_name, class: "m-auto") %>
+    </div>
+    <span class="d-sm-none d-lg-inline">
+      <%= text %>
+    </span>
+  <% end %>
+</li>
