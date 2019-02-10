@@ -22,6 +22,12 @@ $list-group-bg: $footer-bg-color;
 $list-group-hover-bg: lighten($list-group-bg, 10%);
 $list-group-action-color: $regular-link-color;
 
+$nav-tabs-border-color: $footer-bg-color;
+$nav-tabs-link-hover-border-color: $footer-bg-color;
+$nav-tabs-link-active-bg: $footer-bg-color;
+$nav-tabs-link-active-border-color: $footer-bg-color;
+$nav-tabs-link-active-color: $default-color;
+
 // golden:
 // reg: #ffba00
 // hover: #b78500

@@ -1,5 +1,13 @@
 .card {
   color: $footer-bg-color;
+  :not(.list-group):not(p.description) {
+    & > a {
+      &, &:hover {
+        text-decoration: underline;
+        color: $footer-bg-color;
+      }
+    }
+  }
   .card-header {
     color: $default-color;
     background-color: $card-header;
@@ -22,6 +30,12 @@ a {
     text-decoration: none;
     font-weight: bold;
     color: $hover-link-color;
+  }
+}
+
+.nav-tabs {
+  a:not(active) {
+    color: darken($footer-bg-color, 10%);
   }
 }
 

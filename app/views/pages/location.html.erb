@@ -1,45 +1,73 @@
 <% provide(:title, t('.title')) %>
 
-<h1><%= t '.header' %></h1>
-
 <% places={
   "mairie" => [48.513187, -1.660632],
   "maison" => [48.51071, -1.65863],
   "salle" => [48.51173, -1.65548],
 } %>
 
-<div class="row">
-  <div class="col-12 mb-4">
-    <div class="card">
-      <div class="card-header">
-        <%= t '.map' %>
-      </div>
-      <div class="card-body">
-        <p><%= t '.map_desc' %></p>
-        <div id="map-laboussac"></div>
-      </div>
-    </div>
-  </div>
-  <% places.keys.each do |place| %>
-    <%= render("shared/location_card", id: place, title: t(".#{place}.title"),
-               image: "images/#{place}.jpg", text: t(".#{place}.text_html")) %>
-  <% end %>
-</div>
+<ul class="nav nav-tabs nav-fill my-4" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="locations-tab" data-toggle="tab" href="#locations" role="tab" aria-controls="locations" aria-selected="true">
+      <%= t '.location_tab_title' %>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="howto-tab" data-toggle="tab" href="#howto" role="tab" aria-controls="howto" aria-selected="false">
+      <%= t '.howto_tab_title' %>
+    </a>
+  </li>
+</ul>
 
-<% content_for :additional_scripts do %>
-  <%= javascript_pack_tag "leaflet-map", 'data-turbolinks-track': 'reload'  %>
-  <%= stylesheet_pack_tag "leaflet-map", 'data-turbolinks-track': 'reload'  %>
-<% end %>
-<script>
+<div class="tab-content">
+  <div class="tab-pane fade show active" id="locations" role="tabpanel" aria-labelledby="locations-tab">
+    <div class="row">
+      <div class="col-12 mb-4">
+        <div class="card">
+          <div class="card-header">
+            <h3><%= t '.map' %></h3>
+          </div>
+          <div class="card-body">
+            <p><%= t '.map_desc' %></p>
+            <div id="map-laboussac"></div>
+          </div>
+        </div>
+      </div>
+      <% places.keys.each do |place| %>
+        <%= render("shared/location_card", id: place, title: t(".#{place}.title"),
+                   image: "images/#{place}.jpg", text: t(".#{place}.text_html")) %>
+        <% end %>
+    </div>
+
+    <% content_for :additional_scripts do %>
+      <%= javascript_pack_tag "leaflet-map", 'data-turbolinks-track': 'reload'  %>
+      <%= stylesheet_pack_tag "leaflet-map", 'data-turbolinks-track': 'reload'  %>
+    <% end %>
+    <script>
 $(function() {
   let coord = [48.5121422,-1.6581];
   let map = window.manouetfifi.createLeafletMap("map-laboussac", coord);
   map.setZoom(16);
   <% places.each do |place, coords| %>
-    window.manouetfifi.placeMarker(map,
-        [<%= coords.join(",") %>],
-        "<%= t(".#{place}.title") %>",
-        "<%= t(".#{place}.marker_text") %>", "<%= place %>", "<%= place %>");
-  <% end %>
+      window.manouetfifi.placeMarker(map,
+          [<%= coords.join(",") %>],
+          "<%= t(".#{place}.title") %>",
+          "<%= t(".#{place}.marker_text") %>", "<%= place %>", "<%= place %>");
+<% end %>
 });
-</script>
+    </script>
+  </div>
+
+  <div class="tab-pane fade" id="howto" role="tabpanel" aria-labelledby="howto-tab">
+    <% t('.travelling').values.each do |card| %>
+      <div class="card mb-4">
+        <div class="card-header">
+          <h3><%= card[:title] %></h3>
+        </div>
+        <div class="card-body">
+          <%= raw(card[:text_html]) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

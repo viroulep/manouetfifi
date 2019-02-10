@@ -1,6 +1,6 @@
 fr:
   homepage:
-    main_places: "Lieux importants"
+    main_places: "Autour de La Boussac"
     day: "Mercredi"
     date: "28 Août 2019"
     town: "La Boussac"
@@ -12,9 +12,13 @@ fr:
     guests: "Invités"
     contact: "Contact"
   pages:
+    under_construction:
+      title: "Page en construction"
+      text: "Cette page est toujours en construction, revenez plus tard !"
     location:
       title: "Les lieux importants"
-      header: "Les lieux importants à La Boussac"
+      location_tab_title: "Lieux importants à La Boussac"
+      howto_tab_title: "Comment venir"
       map: "Plan"
       map_desc: "Le plan ci-dessous résume les 3 endroits importants où se dérouleront une partie du mariage. Comme vous pouvez le constater, vous n'aurez aucun mal à vous déplacer à pied d'un endroit à un autre !"
       mairie:
@@ -29,6 +33,31 @@ fr:
         title: "La salle des fêtes"
         text_html: "Rendez-vous là bas dès 20h pour le dîner !<br/>N'oubliez pas la soupe à l'oignon tard dans la nuit et le méchoui le lendemain !<br/>Adresse exacte:<br/>Rue de Fougères<br/>35120 La Boussac"
         marker_text: "Dîner et fête"
+      travelling:
+        by_car:
+          title: "En voiture"
+          text_html: >-
+            C'est de loin le moyen le plus simple pour venir !<br/>
+            La Boussac n'est située sur aucun grand axe, donc référez vous à ce que vous dit votre GPS (voir l'autre onglet pour les adresses exactes des différents lieux à La Boussac).<br/>
+            Si vous partez d'un endroit d'où viennent un grand nombre des invités (lire : Paris, Grenoble, ou Nantes) et qu'il vous reste des places dans la voiture, n'hésitez pas à nous laisser un petit mail pour qu'on puisse éventuellement la proposer à des personnes intéressées.
+        by_train:
+          title: "En train"
+          text_html: >-
+            Sauf si vous avez prévu de vous débrouiller une fois arrivé à Rennes, <b>NE PRENEZ PAS le train jusqu'à Rennes</b>.<br/>
+            La gare la plus proche de La Boussac se trouve à <b>Dol-de-Bretagne</b>.<br/>
+            Elle est sur la ligne directe de Paris à Saint-Malo (si vous n'oubliez pas de descendre) et est située à 10 minutes en voiture de La Boussac.<br/>
+            Sauf cas particuliers, <b>c'est l'option la plus pratique pour vous comme pour nous</b>.<br/>
+            Nous pouvons organiser des navettes entre Dol et La Boussac, contactez-nous pour que l'on puisse synchroniser tout le monde&nbsp;!
+        by_carpooling:
+          title: "En covoiturage"
+          text_html: >-
+            Si vous habitez Paris, Grenoble, ou Nantes il est fort probable que des personnes viennent déjà en voiture. Si vous nous envoyez un petit mail on pourra vous mettre en contact avec des personnes ayant des places disponibles.<br/>
+            Sinon vous pouvez regarder sur <a href="https://www.blablacar.fr" target="_blank">Blablacar</a>. Si personne ne passe par La Boussac, visez <b>Dol de Bretagne</b>.
+        by_plane:
+          title: "En avion"
+          text_html: >-
+            L'aéroport le plus proche se trouve à Rennes, mais le plus pratique est à Paris.<br/>
+            Si vous comptez venir en train après avoir atterri, pensez à jeter un œil à la section dédiée ;)
     schedule:
       title: "Planning"
       header: "Planning des festivités"
