@@ -1,12 +1,12 @@
 <div class="timeline">
   <div class="timeline-content">
     <div class="timeline-icon">
-      <i class="fa fa-<%= icon %>"></i>
+      <%= public_image_tag(image) %>
     </div>
     <div class="inner-content">
       <h3 class="title"><%= title %></h3>
       <p class="description">
-        <%= yield %>
+        <%= text %>
       </p>
     </div>
   </div>
