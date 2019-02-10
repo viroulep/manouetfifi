@@ -44,11 +44,11 @@ fr:
         text_html: "Une cérémonie laïque sera célébrée dans le jardin de la %{link}.<br/>La cérémonie sera conduite à la fois en Français et en Anglais."
       cocktail:
         title: "16h30 - Vin d'honneur"
-        text_html: "À l'issue de la cérémonie laïque vous pourrez profiter d'un vin d'honneur qui se tiendra au même endroit.<br/>Nous profiterons de ce moment pour faire des photos souvenir !"
+        text_html: "À l'issue de la cérémonie laïque vous pourrez profiter d'un vin d'honneur qui se tiendra au même endroit.<br/>Nous profiterons de ce moment pour faire des photos souvenir&nbsp;!"
       diner:
         title: "20h00 - Diner et fête"
         link_text: "salle des fêtes de La Boussac"
-        text_html: "La soirée commencera à 20h dans la %{link}.<br/>Le repas prendra la forme d'un buffet, au cours duquel vous pourrez profitez de différentes spécialités régionales (rapportées par les mariés et certains invités !)."
+        text_html: "La soirée commencera à 20h dans la %{link}.<br/>Le repas prendra la forme d'un buffet, au cours duquel vous pourrez profitez de différentes spécialités régionales (rapportées par les mariés et certains invités&nbsp;!)."
       soupe:
         title: "03h00 - Soupe à l'oignon"
         text_html: "Finie la petite fingale du milieu de nuit&nbsp;; des oignons, du beurre (salé), de l'eau, du vin blanc, du fromage rapé, et c'est reparti&nbsp;!"
