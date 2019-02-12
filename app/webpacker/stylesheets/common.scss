@@ -36,6 +36,10 @@ a {
   }
 }
 
+h1 {
+  color: $footer-bg-color;
+}
+
 .nav-tabs {
   a:not(active) {
     color: darken($footer-bg-color, 10%);
