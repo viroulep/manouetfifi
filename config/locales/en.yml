@@ -146,7 +146,7 @@ en:
         #original_hash: 1b6a824
         link_text: La Boussac city hall
         #original_hash: 067906f
-        text_html: 'The wedding''s civil ceremony will take place in %{link}.'
+        text_html: 'The wedding''s civil ceremony will take place in %{link}. Please note it will be <b>only</b> in French!'
       ceremonie:
         #original_hash: 9c8faa0
         title: '03:30 pm - Secular ceremony'
