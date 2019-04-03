@@ -83,7 +83,7 @@ if [ "x$user_choice" == "xy" ]; then
 fi
 
 echo "Installing cron scripts"
-cp /home/fifi/manouetfifi/scripts/cron_weekly.sh /etc/cron.weekly
+cp /home/fifi/manouetfifi/scripts/cert_nginx /etc/cron.weekly
 
 echo "Bootstraping as FiFi"
 su fifi -c "cd /home/fifi && /home/fifi/manouetfifi/scripts/manouetfifi_bootstrap.sh"
